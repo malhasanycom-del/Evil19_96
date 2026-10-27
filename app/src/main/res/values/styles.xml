@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.EvilTV" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#D5A62E</item>
+        <item name="colorPrimaryVariant">#9D7414</item>
+        <item name="colorSecondary">#D5A62E</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#101114</item>
+        <item name="android:navigationBarColor">#101114</item>
+        <item name="android:windowBackground">#101114</item>
+    </style>
+</resources>

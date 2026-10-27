@@ -1,0 +1,51 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#101114" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="22dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="EVIL19_96" android:textColor="#D5A62E" android:textSize="30sp"
+            android:textStyle="bold" android:gravity="center" android:paddingTop="14dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="مشغل IPTV • قنواتك ومفضلاتك في مكان واحد" android:textColor="#C9CBD2"
+            android:textSize="14sp" android:gravity="center" android:padding="8dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="رابط السيرفر (مثال: http://server:8080)" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/serverInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textUri" android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="اسم المستخدم" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/userInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="كلمة المرور" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/passInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/xtreamButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="اتصال Xtream وتحميل القنوات" android:layout_marginTop="10dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/m3uButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="استيراد رابط M3U / بث مباشر" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/stalkerButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="إعداد Stalker Portal (تجريبي)" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/favoritesButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="عرض المفضلة" />
+        <TextView android:id="@+id/statusText" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="جاهز" android:textColor="#D5A62E"
+            android:padding="8dp" android:gravity="center"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/channelList"
+            android:layout_width="match_parent" android:layout_height="500dp"
+            android:clipToPadding="false" android:paddingBottom="20dp"/>
+    </LinearLayout>
+</ScrollView>
