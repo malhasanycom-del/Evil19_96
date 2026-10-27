@@ -36,7 +36,7 @@ object PlaylistRepository {
             }
         }.getOrDefault(emptyMap())
         val arr = org.json.JSONArray(get("$server/player_api.php?username=$user&password=$pass&action=get_live_streams"))
-        (0 until arr.length()).mapNotNull { i ->
+        return (0 until arr.length()).mapNotNull { i ->
             val o = arr.optJSONObject(i) ?: return@mapNotNull null
             val id = o.optString("stream_id")
             val name = o.optString("name", "قناة")
@@ -51,7 +51,7 @@ object PlaylistRepository {
 
     suspend fun m3u(url: String): List<Channel> {
         val content = get(url.trim())
-        parseM3u(content).also { if (it.isEmpty()) error("لم يتم العثور على روابط صالحة في M3U") }
+        return parseM3u(content).also { if (it.isEmpty()) error("لم يتم العثور على روابط صالحة في M3U") }
     }
 
     fun parseM3u(content: String): List<Channel> {
